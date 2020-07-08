@@ -15,7 +15,7 @@ On the technical side, the game is being built with:
 - HTML, JavaScript, & CSS (Using the [Phaser](http://phaser.io/) game engine)
 - [Assembly](http://assemblyapp.co/), [InkScape](https://inkscape.org/en/), & [TexturePacker](https://www.codeandweb.com/texturepacker) (Sprite creation)
 
-# User Tips
+## User Tips
 
 Two-switch controls (`tab` to scan, `enter` to select) are recommended for users who want greater control over the scan speed. 
 
@@ -24,7 +24,7 @@ Press the `escape` key at any point in the game to return to the previous screen
   * Map escapes to main menu
   * Main menu escapes to control selection
 
-# Running Locally
+## Running Locally
 To run the game locally, complete the following steps: 
 
 1. Clone the repository: `git clone https://github.com/christine-hu/playtown.git` 
@@ -34,3 +34,18 @@ To run the game locally, complete the following steps:
 3. Set up a local testing server (ex: `python -m SimpleHTTPServer`)
 
 4. Go to the server (ex: `localhost:8000`) via your web browser. Tada!
+
+## Running Locally with Docker
+
+You can serve the website from a [Docker](https://docs.docker.com/get-docker) container.
+
+Once you have Docker installed, run the following commands to build a Docker image and start a container:
+
+* Build the image: `docker build -t playtown .`
+* Run the container: `docker run --name playtown -p 8000:80 playtown`
+
+The website will be available at [http://localhost:8000](http://localhost:8000)
+
+* To stop and remove the container: `docker rm -f playtown`
+
+If you make changes to the code, repeat the steps to build the image and start a new container.
